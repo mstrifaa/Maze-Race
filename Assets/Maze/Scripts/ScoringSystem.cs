@@ -23,5 +23,13 @@ public class ScoringSystem : MonoBehaviour
         {
             score--;
         }
+
+        if(collision.gameObject.tag == "collectible")
+        {
+            score = score + 5;
+            Destroy(collision.gameObject);
+        }
+
+        Debug.Log("score: " + score);
     }
 }
